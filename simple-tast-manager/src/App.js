@@ -10,7 +10,7 @@ function App() {
   const tasks = useSelector((state) => state.tasks.list);
 
   function handleAddTask() {
-    // Don't add empty tasks
+  
     if (input.trim() === "") return;
 
     dispatch(addTask(input.trim()));
@@ -42,7 +42,7 @@ function App() {
           </button>
         </div>
 
-        {/* Show a message if there are no tasks yet */}
+        
         {tasks.length === 0 && (
           <p className="empty">No tasks yet. Add one above!</p>
         )}
@@ -56,7 +56,7 @@ function App() {
           ))}
         </ul>
 
-        {/* Show task count when there are tasks */}
+        
         {tasks.length > 0 && (
           <p className="task-count">{tasks.length} task{tasks.length !== 1 ? "s" : ""} total</p>
         )}
